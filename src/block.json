@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "pixam/audio-player",
+    "version": "1.0.0",
+    "title": "Pixam Audio Player",
+    "category": "media",
+    "icon": "controls-play",
+    "description": "A clean, sleek, and minimal audio player block by Pixam Studio.",
+    "keywords": ["audio", "music", "player", "sound", "pixam"],
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"]
+    },
+    "attributes": {
+        "audioUrl": {
+            "type": "string",
+            "source": "attribute",
+            "selector": "audio",
+            "attribute": "src"
+        },
+        "title": {
+            "type": "string",
+            "source": "html",
+            "selector": ".pixam-audio-title"
+        },
+        "artist": {
+            "type": "string",
+            "source": "html",
+            "selector": ".pixam-audio-artist"
+        },
+        "thumbnailUrl": {
+            "type": "string",
+            "source": "attribute",
+            "selector": ".pixam-audio-thumbnail img",
+            "attribute": "src"
+        },
+        "thumbnailId": {
+            "type": "number"
+        },
+        "thumbnailAlt": {
+            "type": "string",
+            "source": "attribute",
+            "selector": ".pixam-audio-thumbnail img",
+            "attribute": "alt"
+        },
+        "autoplay": {
+            "type": "boolean",
+            "default": false
+        },
+        "loop": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "textdomain": "pixam-audio-player",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+} 
